@@ -1,0 +1,114 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-10-29T14:28:07.201Z",
+    "end": "2023-10-29T14:30:59.552Z",
+    "duration": 172351,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a1fc38bb-e54c-492c-b83c-6e3a1ab1fd57",
+      "title": "",
+      "fullFile": "cypress/integration/input_Information.ts",
+      "file": "cypress/integration/input_Information.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test (Positive) Checkout",
+          "fullTitle": "Test (Positive) Checkout",
+          "timedOut": null,
+          "duration": 60162,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsJacket();\ndashboardPage.addTOcart();\ncheckoutPage.moveToCart();\ncheckoutPage.AssertCartPage();\ncheckoutPage.Checkout();\ncheckoutPage.InputFirstName('Jasmine');\ncheckoutPage.InputLastName('Khol');\ncheckoutPage.InputPostalCode('14150');\ncheckoutPage.Continue();\ncheckoutPage.AssertCheckoutOverview();\ncheckoutPage.Finish();\ncheckoutPage.AssertOrderConfirmation();",
+          "err": {
+            "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+            "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (http://localhost:58143/__cypress/runner/cypress_runner.js:158308:72)\n    at http://localhost:58143/__cypress/runner/cypress_runner.js:159361:16\n    at tryCatcher (http://localhost:58143/__cypress/runner/cypress_runner.js:13022:23)\n    at http://localhost:58143/__cypress/runner/cypress_runner.js:8144:41\n    at tryCatcher (http://localhost:58143/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:58143/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:58143/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:58143/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:58143/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:58143/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:58143/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:58143/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:58143/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at LoginPage.navigate (http://localhost:58143/__cypress/tests?p=cypress\\integration\\input_Information.ts:272:12)\n    at LoginPage.login (http://localhost:58143/__cypress/tests?p=cypress\\integration\\input_Information.ts:292:14)\n    at Context.eval (http://localhost:58143/__cypress/tests?p=cypress\\integration\\input_Information.ts:107:15)",
+            "diff": null
+          },
+          "uuid": "af9c6a4d-33c7-4a80-8259-85151b95b623",
+          "parentUUID": "a1fc38bb-e54c-492c-b83c-6e3a1ab1fd57",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test (Negative) Checkout",
+          "fullTitle": "Test (Negative) Checkout",
+          "timedOut": null,
+          "duration": 60156,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsJacket();\ndashboardPage.addTOcart();\ncheckoutPage.moveToCart();\ncheckoutPage.AssertCartPage();\ncheckoutPage.Checkout();\ncheckoutPage.InputFirstName('');\ncheckoutPage.InputLastName('');\ncheckoutPage.InputPostalCode('');\ncheckoutPage.Continue();\ncheckoutPage.assertInputInformationFail();",
+          "err": {
+            "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+            "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:158308:72)\n    at https://www.saucedemo.com/__cypress/runner/cypress_runner.js:159361:16\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:13022:23)\n    at https://www.saucedemo.com/__cypress/runner/cypress_runner.js:8144:41\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at LoginPage.navigate (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\input_Information.ts:272:12)\n    at LoginPage.login (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\input_Information.ts:292:14)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\input_Information.ts:123:15)",
+            "diff": null
+          },
+          "uuid": "e0254197-37f9-4c45-84a3-dddf955a2512",
+          "parentUUID": "a1fc38bb-e54c-492c-b83c-6e3a1ab1fd57",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "af9c6a4d-33c7-4a80-8259-85151b95b623",
+        "e0254197-37f9-4c45-84a3-dddf955a2512"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 120318,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

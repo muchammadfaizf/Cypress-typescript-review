@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-29T15:36:14.042Z",
+    "end": "2023-10-29T15:36:22.458Z",
+    "duration": 8416,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0819b8c9-e03f-4438-9cdc-5e779c612bb1",
+      "title": "",
+      "fullFile": "cypress/integration/input_Information.ts",
+      "file": "cypress/integration/input_Information.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test (Positive) Checkout",
+          "fullTitle": "Test (Positive) Checkout",
+          "timedOut": null,
+          "duration": 4908,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsJacket();\ndashboardPage.addTOcart();\ncheckoutPage.moveToCart();\ncheckoutPage.AssertCartPage();\ncheckoutPage.Checkout();\ncheckoutPage.InputFirstName('Jasmine');\ncheckoutPage.InputLastName('Khol');\ncheckoutPage.InputPostalCode('14150');\ncheckoutPage.Continue();\ncheckoutPage.AssertCheckoutOverview();\ncheckoutPage.Finish();\ncheckoutPage.AssertOrderConfirmation();",
+          "err": {},
+          "uuid": "c09c6f56-a174-404a-a316-e2dae1f75248",
+          "parentUUID": "0819b8c9-e03f-4438-9cdc-5e779c612bb1",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test (Negative) Checkout",
+          "fullTitle": "Test (Negative) Checkout",
+          "timedOut": null,
+          "duration": 1840,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsJacket();\ndashboardPage.addTOcart();\ncheckoutPage.moveToCart();\ncheckoutPage.AssertCartPage();\ncheckoutPage.Checkout();\ncheckoutPage.Continue();\ncheckoutPage.assertInputInformationFail();",
+          "err": {},
+          "uuid": "6e2dcc27-5dfe-4a13-b39d-87c595554376",
+          "parentUUID": "0819b8c9-e03f-4438-9cdc-5e779c612bb1",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "c09c6f56-a174-404a-a316-e2dae1f75248",
+        "6e2dcc27-5dfe-4a13-b39d-87c595554376"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 6748,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
